@@ -12,7 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          DEFAULT: "#8b5cf6", // Violet
+          DEFAULT: "#6d28d9", // Violet
           foreground: "#ffffff",
         },
         muted: {
@@ -21,7 +21,7 @@ const config: Config = {
         },
         accent: {
           DEFAULT: "#ede9fe",
-          foreground: "#5b21b6",
+          foreground: "#4c1d95",
         }
       },
       fontFamily: {
