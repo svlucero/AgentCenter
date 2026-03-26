@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-REPO="svlucero/AgentCenter"
-APP_NAME="agentCenter"
+REPO="svlucero/pheron"
+APP_NAME="Pheron"
 
 # Detect architecture
 ARCH=$(uname -m)
