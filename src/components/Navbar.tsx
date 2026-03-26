@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 font-semibold text-gray-900">
           <div className="w-8 h-8 bg-[#6d28d9] rounded-lg flex items-center justify-center">
-            <Image src="/icon.png" alt="Pheron" width={20} height={20} className="invert" />
+            <Image src="/icon.png" alt="Pheron" width={50} height={20} />
           </div>
           <span className="text-lg">Pheron</span>
         </a>
@@ -45,7 +45,6 @@ export default function Navbar() {
             href="#download"
             className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
           >
-            Sign in
           </a>
           <a
             href="#download"

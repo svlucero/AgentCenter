@@ -2,9 +2,24 @@ import { Github, Twitter } from "lucide-react";
 import Image from "next/image";
 
 const links = {
-  Product: ["Features", "How it works", "Agents", "Pricing"],
-  Developers: ["Documentation", "API Reference", "Custom Runners", "GitHub"],
-  Company: ["About", "Blog", "Changelog", "Contact"],
+  Product: [
+    { label: "Features", href: "#features" },
+    { label: "How it works", href: "#how-it-works" },
+    { label: "Agents", href: "#agents" },
+    { label: "Pricing", href: "#download" },
+  ],
+  Developers: [
+    { label: "Documentation", href: "#" },
+    { label: "API Reference", href: "#" },
+    { label: "Custom Runners", href: "#" },
+    { label: "GitHub", href: "https://github.com/svlucero/pheron" },
+  ],
+  Company: [
+    { label: "About", href: "#" },
+    { label: "Blog", href: "https://blog.littlesoft-ai.com/" },
+    { label: "Changelog", href: "#" },
+    { label: "Contact", href: "#" },
+  ],
 };
 
 export default function Footer() {
@@ -16,7 +31,7 @@ export default function Footer() {
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-[#6d28d9] rounded-lg flex items-center justify-center">
-                <Image src="/icon.png" alt="Pheron" width={20} height={20} className="invert" />
+                <Image src="/icon.png" alt="Pheron" width={20} height={20} />
               </div>
               <span className="font-semibold text-gray-900 text-lg">Pheron</span>
             </div>
@@ -24,7 +39,7 @@ export default function Footer() {
               The command center for managing AI agents across your software development workflow.
             </p>
             <div className="flex items-center gap-3 mt-6">
-              <a href="#" className="text-gray-400 hover:text-gray-700 transition-colors">
+              <a href="https://github.com/svlucero/pheron" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-700 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-gray-700 transition-colors">
@@ -41,12 +56,14 @@ export default function Footer() {
               </p>
               <ul className="flex flex-col gap-3">
                 {items.map((item) => (
-                  <li key={item}>
+                  <li key={item.label}>
                     <a
-                      href="#"
+                      href={item.href}
+                      target={item.href.startsWith("http") ? "_blank" : undefined}
+                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                     >
-                      {item}
+                      {item.label}
                     </a>
                   </li>
                 ))}
