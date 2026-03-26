@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
@@ -14,13 +14,21 @@ const navLinks = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [mobileOpen]);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 font-semibold text-gray-900">
           <div className="w-8 h-8 bg-[#6d28d9] rounded-lg flex items-center justify-center">
-            <Image src="/icon.png" alt="Pheron" width={50} height={20} />
+            <Image src="/icon.png" alt="Pheron" width={40} height={40} />
           </div>
           <span className="text-lg">Pheron</span>
         </a>
@@ -45,6 +53,7 @@ export default function Navbar() {
             href="#download"
             className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
           >
+            Sign in
           </a>
           <a
             href="#download"
