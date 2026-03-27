@@ -21,7 +21,24 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}>
-        {children}
+        <div style={{ position: "relative", zIndex: 1 }}>
+          {children}
+        </div>
+        {/* Ant trail background — visible over all sections using multiply blend */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "fixed",
+            inset: 0,
+            backgroundImage: "url(/camino_hormigas.png)",
+            backgroundRepeat: "repeat",
+            backgroundSize: "90px",
+            mixBlendMode: "multiply",
+            opacity: 0.1,
+            pointerEvents: "none",
+            zIndex: 50,
+          }}
+        />
       </body>
     </html>
   );
