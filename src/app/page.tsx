@@ -4,7 +4,6 @@ import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Agents from "@/components/Agents";
 import TokenControl from "@/components/TokenControl";
-import Telegram from "@/components/Telegram";
 import Download from "@/components/Download";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
@@ -18,7 +17,6 @@ export default function Home() {
       <HowItWorks />
       <Agents />
       <TokenControl />
-      <Telegram />
       <Download />
       <Footer />
       <BackToTop />
