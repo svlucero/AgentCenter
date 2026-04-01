@@ -8,6 +8,7 @@ import {
   PuzzleIcon,
   MessageCircle,
   BrainCircuit,
+  PlayCircle,
 } from "lucide-react";
 
 type Feature = {
@@ -76,6 +77,13 @@ const features: Feature[] = [
       "Automatic context window management per agent — trim, summarize, and prioritize history to cut token usage on long-running tasks.",
     color: "bg-orange-50 text-orange-600",
     comingSoon: true,
+  },
+  {
+    icon: PlayCircle,
+    title: "Auto Mode",
+    description:
+      "Runners present their execution plan and ask for your approval once. After confirmation, they run end-to-end without interruptions — no more manual step-by-step approvals.",
+    color: "bg-teal-50 text-teal-600",
   },
 ];
 
