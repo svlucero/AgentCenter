@@ -295,10 +295,24 @@ const sections: Section[] = [
           headers={["Type", "Description"]}
           rows={[
             ["system", "Provided by Pheron, not editable"],
-            ["default", "Default ones, customizable"],
+            ["default", "Built-in, customizable"],
             ["user", "Created by you"],
           ]}
         />
+
+        <p className="font-semibold text-gray-800">Built-in specializations</p>
+        <Table
+          headers={["", "Name", "What it does"]}
+          rows={[
+            ["🤖", "Assistant", "Persistent assistant for the repository — answers questions, investigates bugs, and reviews code."],
+            ["💬", "Task Chat", "Helps plan and discuss tasks for the repository."],
+            ["⚙️", "Developer", "Reads the codebase, implements the requested changes, runs tests, and commits the result."],
+            ["🌐", "General Purpose", "A versatile agent that handles any task — coding, research, writing, analysis, or general problem-solving."],
+            ["🛠️", "Skill Creator", "Interactive assistant that guides you through creating a new skill using the /skill-creator workflow."],
+            ["🎯", "Specialization Editor", "Interactive editor that helps you define, refine, and configure agent specializations and their associated skills."],
+          ]}
+        />
+
         <div className="space-y-3">
           <p className="font-semibold text-gray-800">Create a specialization</p>
           <div className="space-y-2">
@@ -326,6 +340,16 @@ const sections: Section[] = [
           Skills are reusable capability packages installed into AI runners to
           extend them with specialized knowledge or predefined workflows.
         </p>
+
+        <p className="font-semibold text-gray-800">Built-in skills</p>
+        <Table
+          headers={["Name", "Runner", "What it does"]}
+          rows={[
+            ["feature-dev", "Claude / Gemini", "Full feature development workflow: syncs main, creates an isolated git worktree, reads project context, implements the feature, commits, and opens a PR."],
+            ["specialization-editing", "Claude / Gemini", "Guides you through editing an agentFlow specialization — refining its purpose, base prompt, and associated skill. Can trigger /skill-creator to create new skills along the way."],
+          ]}
+        />
+
         <div className="space-y-3">
           <p className="font-semibold text-gray-800">Create a skill</p>
           <div className="space-y-2">
